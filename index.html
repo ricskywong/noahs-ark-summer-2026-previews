@@ -71,7 +71,11 @@
           ([itemVersion]) => itemVersion === version,
         )) {
           const size = `${width}x${height}`;
-          const href = `./ads/${adVersion.toLowerCase()}/${size}/index.html`;
+          const hrefBase = `./ads/${adVersion.toLowerCase()}/${size}/index.html`;
+          const href =
+            adVersion === "A" && size === "250x250"
+              ? `${hrefBase}?v=c5b6675`
+              : hrefBase;
           const card = document.createElement("article");
           card.className = "ad-card";
           card.innerHTML = `
