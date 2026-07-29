@@ -1,0 +1,84 @@
+<!doctype html>
+<html amp4ads lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,minimum-scale=1">
+  <meta name="ad.size" content="width=728,height=90">
+  <script async src="https://cdn.ampproject.org/amp4ads-v0.js"></script>
+  <style amp4ads-boilerplate>body{visibility:hidden}</style>
+  <style amp-custom>
+    html, body {
+      width:728px; height:90px; margin:0; padding:0; overflow:hidden; background:#e1e9ec;
+    }
+    .ad {
+      position:relative; width:728px; height:90px; overflow:hidden; background:#e1e9ec;
+    }
+    .frame, .motion {
+      opacity:0; animation-duration:15s; animation-timing-function:linear;
+      animation-iteration-count:2; animation-fill-mode:both;
+    }
+    .frame {
+      position:absolute; inset:0; width:728px; height:90px;
+    }
+    .motion { position:absolute; z-index:2; transform-origin:center; }
+    .frame-01 { animation-name:frame-01; }
+    .frame-02 { animation-name:frame-02; }
+    .frame-03 { animation-name:frame-03; }
+    .frame-04 { animation-name:frame-04; }
+    
+    .tagline { left:158px; top:10px; width:262px; height:66px; animation-name:tagline-motion; }
+    .cta { left:635px; top:2px; width:91px; height:36px; animation-name:cta-motion; }
+    .border {
+      position:absolute; inset:0; z-index:10; pointer-events:none;
+      box-shadow:inset 0 0 0 1px rgba(0,0,0,.18);
+    }
+
+    @keyframes frame-01 {
+      0% { opacity: 1; transform: scale(1.02); }
+      5%, 24% { opacity: 1; transform: scale(1); }
+      27%, 100% { opacity: 0; transform: scale(1); }
+    }
+    @keyframes frame-02 {
+      0%, 24% { opacity: 0; }
+      27%, 49% { opacity: 1; }
+      52%, 100% { opacity: 0; }
+    }
+    @keyframes frame-03 {
+      0%, 49% { opacity: 0; }
+      52%, 74% { opacity: 1; }
+      77%, 100% { opacity: 0; }
+    }
+    @keyframes frame-04 {
+      0%, 74% { opacity: 0; transform: translateY(2%); }
+      77%, 100% { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes tagline-motion {
+      0%, 77% { opacity: 0; transform: translateX(24%) scale(.92); }
+      80% { opacity: 1; transform: translateX(0) scale(1); }
+      83% { opacity: 1; transform: translateX(0) scale(1.035); }
+      85.5% { opacity: 1; transform: translateX(0) scale(1); }
+      88% { opacity: 1; transform: translateX(0) scale(1.035); }
+      90.5%, 100% { opacity: 1; transform: translateX(0) scale(1); }
+    }
+    @keyframes cta-motion {
+      0%, 81.7% { opacity: 0; transform: translateY(22%) scale(.96); }
+      84.2% { opacity: 1; transform: translateY(0) scale(1); }
+      87% { opacity: 1; transform: translateY(-3%) scale(1.015); }
+      90% { opacity: 1; transform: translateY(0) scale(1); }
+      93% { opacity: 1; transform: translateY(-3%) scale(1.015); }
+      96%, 100% { opacity: 1; transform: translateY(0) scale(1); }
+    }
+  </style>
+</head>
+<body>
+  <div class="ad" aria-label="Noah's Ark promotion">
+    <amp-img class="frame frame-01" src="frame-01.jpg" width="728" height="90" alt=""></amp-img>
+    <amp-img class="frame frame-02" src="frame-02.jpg" width="728" height="90" alt=""></amp-img>
+    <amp-img class="frame frame-03" src="frame-03.jpg" width="728" height="90" alt=""></amp-img>
+    <amp-img class="frame frame-04" src="base-04.jpg" width="728" height="90" alt=""></amp-img>
+    <amp-img class="motion tagline" src="tagline-04.png" width="262" height="66" alt=""></amp-img>
+    <amp-img class="motion cta" src="cta-04.png" width="91" height="36" alt="More details"></amp-img>
+    <div class="border" aria-hidden="true"></div>
+  </div>
+</body>
+</html>

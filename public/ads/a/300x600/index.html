@@ -1,0 +1,272 @@
+<!doctype html>
+<html amp4ads lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,minimum-scale=1">
+  <meta name="ad.size" content="width=300,height=600">
+  <script async src="https://cdn.ampproject.org/amp4ads-v0.js"></script>
+  <style amp4ads-boilerplate>body{visibility:hidden}</style>
+  <style amp-custom>
+    html,
+    body {
+      width: 300px;
+      height: 600px;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background: #e1e9ec;
+    }
+
+    .ad {
+      position: relative;
+      width: 300px;
+      height: 600px;
+      overflow: hidden;
+      background: #e1e9ec;
+    }
+
+    .art {
+      position: absolute;
+      inset: 0;
+      width: 300px;
+      height: 600px;
+    }
+
+    .art,
+    .motion {
+      opacity: 0;
+      animation-duration: 15s;
+      animation-timing-function: linear;
+      animation-iteration-count: 2;
+      animation-fill-mode: both;
+    }
+
+    .motion {
+      position: absolute;
+      z-index: 2;
+    }
+
+    .intro {
+      animation-name: intro;
+    }
+
+    .page-02 {
+      animation-name: page-02;
+    }
+
+    .page-03 {
+      animation-name: page-03;
+    }
+
+    .page-04 {
+      animation-name: page-04;
+    }
+
+    .page-05 {
+      animation-name: page-05;
+    }
+
+    .page-06 {
+      animation-name: page-06;
+    }
+
+    .new-badge {
+      left: 122px;
+      top: 235px;
+      width: 178px;
+      height: 153px;
+      animation-name: new-badge;
+      transform-origin: 89px 77px;
+    }
+
+    .cta {
+      left: 57px;
+      top: 432px;
+      width: 193px;
+      height: 99px;
+      animation-name: cta;
+      transform-origin: 96px 50px;
+    }
+
+    .border {
+      position: absolute;
+      inset: 0;
+      z-index: 20;
+      pointer-events: none;
+      box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .18);
+    }
+
+    @keyframes intro {
+      0% {
+        opacity: 1;
+        transform: scale(1.025);
+      }
+      4%,
+      13.5% {
+        opacity: 1;
+        transform: scale(1);
+      }
+      15.5%,
+      100% {
+        opacity: 0;
+        transform: scale(1.01);
+      }
+    }
+
+    @keyframes page-02 {
+      0%,
+      13.5% {
+        opacity: 0;
+      }
+      15.5%,
+      31.8% {
+        opacity: 1;
+      }
+      34%,
+      100% {
+        opacity: 0;
+      }
+    }
+
+    @keyframes page-03 {
+      0%,
+      31.8% {
+        opacity: 0;
+      }
+      34%,
+      48.8% {
+        opacity: 1;
+      }
+      51%,
+      100% {
+        opacity: 0;
+      }
+    }
+
+    @keyframes page-04 {
+      0%,
+      48.8% {
+        opacity: 0;
+      }
+      51%,
+      65.8% {
+        opacity: 1;
+      }
+      68%,
+      100% {
+        opacity: 0;
+      }
+    }
+
+    @keyframes page-05 {
+      0%,
+      65.8% {
+        opacity: 0;
+        transform: scale(1.025);
+      }
+      68%,
+      79.8% {
+        opacity: 1;
+        transform: scale(1);
+      }
+      82%,
+      100% {
+        opacity: 0;
+        transform: scale(1.01);
+      }
+    }
+
+    @keyframes new-badge {
+      0%,
+      68% {
+        opacity: 0;
+        transform: translateX(42px) scale(.92);
+      }
+      70.5% {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+      }
+      73% {
+        opacity: 1;
+        transform: translateX(0) scale(1.035);
+      }
+      75.5% {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+      }
+      78% {
+        opacity: 1;
+        transform: translateX(0) scale(1.035);
+      }
+      79.8% {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+      }
+      82%,
+      100% {
+        opacity: 0;
+        transform: translateX(-8px) scale(1);
+      }
+    }
+
+    @keyframes page-06 {
+      0%,
+      79.8% {
+        opacity: 0;
+        transform: translateY(12px);
+      }
+      82%,
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes cta {
+      0%,
+      81.7% {
+        opacity: 0;
+        transform: translateY(18px) scale(.96);
+      }
+      84.2% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+      87% {
+        opacity: 1;
+        transform: translateY(-3px) scale(1.015);
+      }
+      90% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+      93% {
+        opacity: 1;
+        transform: translateY(-3px) scale(1.015);
+      }
+      96%,
+      100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="ad" aria-label="Noah's Ark Summer 2026 promotion">
+    <amp-img class="art intro" src="frame-01.jpg" width="300" height="600" alt="Noah's Ark summer career experience programme"></amp-img>
+
+    <amp-img class="art page-02" src="frame-02.jpg" width="300" height="600" alt="Firefighter and astronaut career experiences"></amp-img>
+    <amp-img class="art page-03" src="frame-03.jpg" width="300" height="600" alt="Flight attendant and future city builder career experiences"></amp-img>
+    <amp-img class="art page-04" src="frame-04.jpg" width="300" height="600" alt="Dairy research and automotive power career experiences"></amp-img>
+
+    <amp-img class="art page-05" src="base-05.jpg" width="300" height="600" alt="New Padel Fun experience"></amp-img>
+    <amp-img class="motion new-badge" src="badge-05.png" width="178" height="153" alt=""></amp-img>
+
+    <amp-img class="art page-06" src="base-06.jpg" width="300" height="600" alt="Buy two get one free ticket offer"></amp-img>
+    <amp-img class="motion cta" src="cta-06.png" width="193" height="99" alt="More details"></amp-img>
+
+    <div class="border" aria-hidden="true"></div>
+  </div>
+</body>
+</html>

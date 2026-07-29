@@ -1,0 +1,97 @@
+<!doctype html>
+<html amp4ads lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,minimum-scale=1">
+  <meta name="ad.size" content="width=300,height=250">
+  <script async src="https://cdn.ampproject.org/amp4ads-v0.js"></script>
+  <style amp4ads-boilerplate>body{visibility:hidden}</style>
+  <style amp-custom>
+    html, body {
+      width:300px; height:250px; margin:0; padding:0; overflow:hidden; background:#e1e9ec;
+    }
+    .ad {
+      position:relative; width:300px; height:250px; overflow:hidden; background:#e1e9ec;
+    }
+    .frame, .motion {
+      opacity:0; animation-duration:15s; animation-timing-function:linear;
+      animation-iteration-count:2; animation-fill-mode:both;
+    }
+    .frame {
+      position:absolute; inset:0; width:300px; height:250px;
+    }
+    .motion { position:absolute; z-index:2; transform-origin:center; }
+    .frame-01 { animation-name:frame-01; }
+    .frame-02 { animation-name:frame-02; }
+    .frame-03 { animation-name:frame-03; }
+    .frame-04 { animation-name:frame-04; }
+    .frame-05 { animation-name:frame-05; } .frame-06 { animation-name:frame-06; }
+    .badge { left:202px; top:103px; width:98px; height:77px; animation-name:badge-motion; }
+    .cta { left:109px; top:210px; width:82px; height:40px; animation-name:cta-motion; }
+    .border {
+      position:absolute; inset:0; z-index:10; pointer-events:none;
+      box-shadow:inset 0 0 0 1px rgba(0,0,0,.18);
+    }
+
+    @keyframes frame-01 {
+      0% { opacity: 1; transform: scale(1.02); }
+      4%, 13.5% { opacity: 1; transform: scale(1); }
+      15.5%, 100% { opacity: 0; transform: scale(1); }
+    }
+    @keyframes frame-02 {
+      0%, 13.5% { opacity: 0; }
+      15.5%, 31.8% { opacity: 1; }
+      34%, 100% { opacity: 0; }
+    }
+    @keyframes frame-03 {
+      0%, 31.8% { opacity: 0; }
+      34%, 48.8% { opacity: 1; }
+      51%, 100% { opacity: 0; }
+    }
+    @keyframes frame-04 {
+      0%, 48.8% { opacity: 0; }
+      51%, 65.8% { opacity: 1; }
+      68%, 100% { opacity: 0; }
+    }
+    @keyframes frame-05 {
+      0%, 65.8% { opacity: 0; transform: scale(1.015); }
+      68%, 79.8% { opacity: 1; transform: scale(1); }
+      82%, 100% { opacity: 0; transform: scale(1); }
+    }
+    @keyframes badge-motion {
+      0%, 68% { opacity: 0; transform: translateX(24%) scale(.92); }
+      70.5% { opacity: 1; transform: translateX(0) scale(1); }
+      73% { opacity: 1; transform: translateX(0) scale(1.035); }
+      75.5% { opacity: 1; transform: translateX(0) scale(1); }
+      78% { opacity: 1; transform: translateX(0) scale(1.035); }
+      79.8% { opacity: 1; transform: translateX(0) scale(1); }
+      82%, 100% { opacity: 0; transform: translateX(-5%) scale(1); }
+    }
+    @keyframes frame-06 {
+      0%, 79.8% { opacity: 0; transform: translateY(2%); }
+      82%, 100% { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes cta-motion {
+      0%, 81.7% { opacity: 0; transform: translateY(22%) scale(.96); }
+      84.2% { opacity: 1; transform: translateY(0) scale(1); }
+      87% { opacity: 1; transform: translateY(-3%) scale(1.015); }
+      90% { opacity: 1; transform: translateY(0) scale(1); }
+      93% { opacity: 1; transform: translateY(-3%) scale(1.015); }
+      96%, 100% { opacity: 1; transform: translateY(0) scale(1); }
+    }
+  </style>
+</head>
+<body>
+  <div class="ad" aria-label="Noah's Ark promotion">
+    <amp-img class="frame frame-01" src="frame-01.jpg" width="300" height="250" alt=""></amp-img>
+    <amp-img class="frame frame-02" src="frame-02.jpg" width="300" height="250" alt=""></amp-img>
+    <amp-img class="frame frame-03" src="frame-03.jpg" width="300" height="250" alt=""></amp-img>
+    <amp-img class="frame frame-04" src="frame-04.jpg" width="300" height="250" alt=""></amp-img>
+    <amp-img class="frame frame-05" src="base-05.jpg" width="300" height="250" alt=""></amp-img>
+    <amp-img class="frame frame-06" src="base-06.jpg" width="300" height="250" alt=""></amp-img>
+    <amp-img class="motion badge" src="badge-05.png" width="98" height="77" alt=""></amp-img>
+    <amp-img class="motion cta" src="cta-06.png" width="82" height="40" alt="More details"></amp-img>
+    <div class="border" aria-hidden="true"></div>
+  </div>
+</body>
+</html>
