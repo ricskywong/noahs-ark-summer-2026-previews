@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Client previews for the latest Version A and Version B Noah's Ark Summer 2026 AMPHTML ads."
+    />
+    <title>Noah’s Ark Summer 2026 | AMPHTML Ad Previews</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main>
+      <header class="hero">
+        <div class="eyebrow">Client preview gallery</div>
+        <h1>Noah’s Ark Summer 2026</h1>
+        <p>
+          Latest AMPHTML display ads for Version A and Version B. Open any
+          preview in a separate browser tab to view it at its exact ad size.
+        </p>
+        <div class="hero-meta">
+          <span>12 ad sizes</span>
+          <span>2 animation loops</span>
+          <span>30 seconds total</span>
+        </div>
+      </header>
+
+      <div id="gallery"></div>
+
+      <footer>
+        <span>Noah’s Ark Summer 2026 GDN Campaign</span>
+        <span>Latest delivery preview · 29 July 2026</span>
+      </footer>
+    </main>
+
+    <script>
+      const ads = [
+        ["A", 250, 250, 1],
+        ["A", 300, 250, 0.9],
+        ["A", 300, 600, 0.58],
+        ["A", 320, 100, 0.9],
+        ["A", 320, 480, 0.72],
+        ["A", 728, 90, 0.44],
+        ["B", 250, 250, 1],
+        ["B", 300, 250, 0.9],
+        ["B", 300, 600, 0.58],
+        ["B", 320, 100, 0.9],
+        ["B", 320, 480, 0.72],
+        ["B", 728, 90, 0.44],
+      ];
+
+      const gallery = document.querySelector("#gallery");
+
+      for (const version of ["A", "B"]) {
+        const section = document.createElement("section");
+        section.className = "version-section";
+        section.innerHTML = `
+          <div class="section-heading">
+            <div>
+              <span class="section-kicker">Creative set</span>
+              <h2>Version ${version}</h2>
+            </div>
+            <span class="section-count">6 sizes</span>
+          </div>
+          <div class="ad-grid"></div>
+        `;
+
+        const grid = section.querySelector(".ad-grid");
+        for (const [adVersion, width, height, scale] of ads.filter(
+          ([itemVersion]) => itemVersion === version,
+        )) {
+          const size = `${width}x${height}`;
+          const href = `./ads/${adVersion.toLowerCase()}/${size}/index.html`;
+          const card = document.createElement("article");
+          card.className = "ad-card";
+          card.innerHTML = `
+            <div class="card-heading">
+              <div>
+                <span class="version-badge version-${adVersion.toLowerCase()}">Version ${adVersion}</span>
+                <h3>${size}</h3>
+              </div>
+              <span class="status">Latest</span>
+            </div>
+            <div class="preview-stage">
+              <div class="preview-viewport" style="width:${Math.round(width * scale)}px;height:${Math.round(height * scale)}px">
+                <iframe
+                  class="ad-frame"
+                  style="width:${width}px;height:${height}px;transform:scale(${scale})"
+                  src="${href}"
+                  title="Version ${adVersion} ${size} AMPHTML ad preview"
+                  scrolling="no"
+                ></iframe>
+              </div>
+            </div>
+            <a class="open-link" href="${href}" target="_blank" rel="noreferrer">
+              Open full-size preview <span aria-hidden="true">↗</span>
+            </a>
+          `;
+          grid.append(card);
+        }
+
+        gallery.append(section);
+      }
+    </script>
+  </body>
+</html>
