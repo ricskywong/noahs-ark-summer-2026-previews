@@ -73,8 +73,8 @@
           const size = `${width}x${height}`;
           const hrefBase = `./ads/${adVersion.toLowerCase()}/${size}/index.html`;
           const href =
-            adVersion === "A" && size === "250x250"
-              ? `${hrefBase}?v=c5b6675`
+            adVersion === "A" && (size === "250x250" || size === "300x250")
+              ? `${hrefBase}?v=static-card-0730`
               : hrefBase;
           const card = document.createElement("article");
           card.className = "ad-card";
