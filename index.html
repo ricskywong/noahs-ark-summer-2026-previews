@@ -75,7 +75,9 @@
           const href =
             adVersion === "A" && (size === "250x250" || size === "300x250")
               ? `${hrefBase}?v=static-card-0730`
-              : hrefBase;
+              : adVersion === "B" && size === "728x90"
+                ? `${hrefBase}?v=hires-b728-0730`
+                : hrefBase;
           const card = document.createElement("article");
           card.className = "ad-card";
           card.innerHTML = `
